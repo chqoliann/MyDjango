@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список врачей</title>
+</head>
+<body>
+    <h1>Список врачей</h1>
+    <ul>
+    {% for doctor in doctors %}
+        <li><a href="{% url 'doctor_detail' doctor.id %}">{{ doctor }}</a></li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
